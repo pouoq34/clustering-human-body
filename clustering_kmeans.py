@@ -41,7 +41,7 @@ model.fit(female_pca)
 # 클러스터링 결과 각 데이터가 몇 번째 그룹에 속하는지 저장
 female_pca['cluster'] = model.fit_predict(female_pca)
 
-female_pca.to_csv("/home/ylab2/Downloads/body/data/female/female_cluster.csv", encoding ='utf-8-sig')
+female_pca.to_csv("/data/female/female_cluster.csv", encoding ='utf-8-sig')
 
 
 

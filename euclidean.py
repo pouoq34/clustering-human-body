@@ -7,7 +7,7 @@ female = female.drop('성별', axis=1)
 female = female.dropna(how='all')# if in row has null drop
 female.set_index('고객번호',inplace=True)
 
-female.to_csv('/home/ylab2/Downloads/body/data/female/female_data_total.csv', index=True, encoding ='utf-8-sig')
+female.to_csv('/female/female_data_total.csv', index=True, encoding ='utf-8-sig')
 
 male = pd.read_csv('/data/male/male_data_t.csv')
 male = male.drop('성별', axis=1)

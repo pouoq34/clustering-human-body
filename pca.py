@@ -23,11 +23,11 @@ female_pca = female_pca.set_index(a_row)
 female_pca.head()
 pca.explained_variance_ratio_
 sum(pca.explained_variance_ratio_)
-female_pca.to_csv("/home/ylab2/Downloads/body/data/female_pca_t.csv")
+female_pca.to_csv("/data/female_pca_t.csv")
 
 
 #male(428)
-male = pd.read_csv("//data/male_data_t.csv")
+male = pd.read_csv("/data/male_data_t.csv")
 male.set_index('고객번호', inplace=True)
 
 m_row = list()
@@ -45,4 +45,4 @@ male_pca = pd.DataFrame(data=maleComponents, columns = ['component1', 'component
                                                                  'component8','component9','component10','component11','component12','component13','component14','component15','component16','component17'])
 male_pca = male_pca.set_index(m_row)
 
-male_pca.to_csv("/home/ylab2/Downloads/body/data/male_pca_t.csv")
+male_pca.to_csv("/data/male_pca_t.csv")

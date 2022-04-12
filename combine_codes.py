@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 
 #merge 하고 싶은 file list들
-file_list = ["/home/ylab2/Downloads/body/data/mc365.xlsx","/home/ylab2/Downloads/body/data/sizekorea.xlsx","/home/ylab2/Downloads/body/data/3d_160.xlsx"]
+file_list = ["data.xlsx","sizekorea.xlsx","3d_data.xlsx"]
 merge_df = pd.DataFrame()
 file_df2 = pd.DataFrame()
 
@@ -19,8 +19,6 @@ columns = list(file_df.columns)
 
 temp_df = pd.DataFrame(file_df2, columns = columns)
 merge_df = merge_df.append(temp_df, ignore_index=False)
-# merge_df.to_csv("/home/ylab2/Downloads/body/data/merge_3d.csv", index=False, encoding ='utf-8-sig')
-# df_3d = pd.read_csv("C:/Users/user/Desktop/excel/123/data/merge_3d.csv",encoding ="UTF-8")
 
 #전처리 시작
 merge_df.set_index('고객번호', inplace=True)
@@ -41,8 +39,8 @@ male_df = groups.get_group(0)
 
 # df.set_index('고객번호', inplace=True)
 
-female_df.to_csv("/home/ylab2/Downloads/body/data/female.csv", index=True, encoding ='utf-8-sig')
-male_df.to_csv("/home/ylab2/Downloads/body/data/male.csv", index=True, encoding ='utf-8-sig')
+female_df.to_csv("female.csv", index=True, encoding ='utf-8-sig')
+male_df.to_csv("male.csv", index=True, encoding ='utf-8-sig')
 
 
 
